@@ -19,6 +19,7 @@ public class UserResource {
     @Autowired
     private UserRepository userRepository;
 
+
     @GetMapping("/users")
     public List<User> showAllUsers(){
         return userRepository.findAll();
