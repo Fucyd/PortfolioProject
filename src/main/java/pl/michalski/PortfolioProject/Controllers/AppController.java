@@ -10,4 +10,19 @@ public class AppController {
     public String mainPage(){
         return "mainPage";
     }
+
+    @RequestMapping("/login")
+    public String loginPage(){
+        return "login";
+    }
+
+    @RequestMapping("/afterLogin")
+    public String afterLogin(){
+        return "afterLogin";
+    }
+
+    @RequestMapping("/logout")
+    public String logout(){
+        return "afterLogin";
+    }
 }
