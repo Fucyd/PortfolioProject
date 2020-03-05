@@ -16,13 +16,10 @@ public class AppController {
         return "login";
     }
 
-    @RequestMapping("/afterLogin")
+    @RequestMapping("/admin")
     public String afterLogin(){
-        return "afterLogin";
+        return "adminPanel";
     }
 
-    @RequestMapping("/logout")
-    public String logout(){
-        return "afterLogin";
-    }
+
 }
