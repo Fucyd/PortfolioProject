@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Wszystkie Produkty</title>
+
+
+    <style>
+        .one-product-class {
+            margin-bottom: 15px;
+            background-color: antiquewhite;
+        }
+
+        img{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+<h1>Wszystkie produkty</h1>
+<h3><a th:href="@{'/products/add'}">Dodaj produkt</a> </h3>
+<div th:each="products:${allProducts}" th:id="all-products-container">
+    <div th:class="one-product-class">
+        <p th:text="${products.name}">Jabłko</p>
+        <p th:text="${products.price}">25zł</p>
+        <p th:text="${products.description}">Opakowanie 10kg jabłek prosto z polskich sadów.</p>
+        <img th:if="${!products.imageUrl.isEmpty()}" th:src="${products.imageUrl}" alt="obraz produktu imageUrlHosta">
+
+
+    </div>
+</div>
+
+
+</div>
+</body>
+</html>

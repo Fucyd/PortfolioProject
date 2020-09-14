@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Dodaj nowy produkt</h1>
+<form action="#" th:action="@{/products/save}" th:object="${newProduct}" method="post">
+    <tr>
+        <td>name</td>
+        <td><input type="text" th:field="*{name}"></td>
+        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+
+    </tr>
+    <tr>
+        <td>price</td>
+        <td><input type="number" step="any" th:field="*{price}"></td>
+        <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span>
+
+    </tr>
+    <tr>
+        <td>description</td>
+        <td><input type="text" th:field="*{description}"></td>
+        <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+
+    </tr>
+    <tr>
+        <td>Adres Obrazu</td>
+        <input type="text" th:field="*{imageUrl}"></td>   </tr>
+        <span th:if="${#fields.hasErrors('imageUrl')}" th:errors="*{imageUrl}"></span>
+
+    <tr>
+        <td>
+            <button type="submit" value="Submit">Submit</button>
+        </td>
+    </tr>
+
+</form>
+</body>
+</html>
