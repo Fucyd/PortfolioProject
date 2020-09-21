@@ -1,5 +1,5 @@
 body{
-
+    font-family: 'Lato', sans-serif;
     background-color: #f2f2f2;
 }
 
@@ -21,10 +21,48 @@ body{
     margin: auto;
 } */
 
-.col{
+.logo{
+    width: 10rem;
+}
+
+.first-top-bar > .row > .col{
     text-align: center;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    background-color: rgba(86,61,124,.15);
-    border: 1px solid rgba(86,61,124,.2);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(94, 72, 128, 0.15);
+}
+
+.first-top-bar > .row > .col > .search-input{
+width: 40vw;
+border:none;
+text-align: left;
+border-radius: 25px;
+}
+
+.first-top-bar > .row > .col{
+    height: 8vh;
+    line-height: 4vh;
+}
+
+
+.second-top-bar-categories > .row > .col{
+    margin-top: 0.5rem;
+    text-align: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: rgba(94, 72, 128, 0.15);
+    border-right: 1px solid rgba(86,61,124,.2);
+}
+
+.all-products{
+    margin: auto;
+    margin-top: 2rem;
+    height: 50vh;
+    width: 80vw;
+    background-color: rgba(94, 72, 128, 0.15);
+}
+
+.page-footer{
+    color:white;
+    background-color: #212121;
 }

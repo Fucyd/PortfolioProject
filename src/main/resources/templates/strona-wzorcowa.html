@@ -5,7 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../static/css/strona-wzorcowa.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 </head>
@@ -13,11 +13,13 @@
     <div class="container-fluid">
 <!-- //panel górny- logo, wyszukiwarka, reklama, kontakt, koszyk, użytkownik, koszyk -->
 <div class="first-top-bar">
-    <div class="first-top-bar-logo"><a href="#"><img src="#" alt="logo"></a></div>
-    <div class="first-top-bar-search"><input type="search" placeholder="wyszukaj"></div>
-    <div class="first-top-bar-contact"><a href="#"></a><img src="#" alt="contact"></a></div>
-    <div class="first-top-bar-cart"><a href="#"></a><img src="#" alt="cart"></a></div>
-    <div class="first-top-bar-logout"><a href="@{/logout}"></a><img src="#" alt="logout"></a></div>
+    <div class="row">
+        <div class="col"><a href="#"><img class="logo" src="../static/images/logo-portfolio-project.png" alt="logo"></a></div>
+        <div class="col"><input class="search-input" type="search" placeholder="wyszukaj"></div>
+        <div class="col"><a href="#"><img src="#" alt="contact"></a></div>
+        <div class="col"><a href="#"><img src="#" alt="cart"></a></div>
+        <div class="col"><a href="@{/logout}"><img src="#" alt="logout"></a></div>
+</div>
 </div>
 <div class="second-top-bar-categories">
     <div class="row">
@@ -28,7 +30,24 @@
         <div class="col"><a href="@{/products/laptops">RAM</a></div>
     </div>
 </div>
+
+<div class="all-products">
+<h2>popraw === wszystkie produkty</h2>
+
+
 </div>
 
+<!-- Footer -->
+<footer class="page-footer fixed-bottom">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      Piotr Michalski
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+</div>
 </body>
 </html>
