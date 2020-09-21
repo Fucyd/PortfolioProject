@@ -30,7 +30,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .httpBasic();
         http.csrf().disable();
         http.headers().frameOptions().disable();
-
     }
 
     @Override
@@ -49,7 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //        UserDetails admin = User.withDefaultPasswordEncoder()
 //                .username("piotr")
 //                .password("123")
-//                .roles("ADMIN", "USER")
+//                .roles("ADMIN")
 //                .build();
 //
 //        UserDetails user = User.withDefaultPasswordEncoder()

@@ -1,13 +1,9 @@
 package pl.michalski.PortfolioProject.dto;
 
 
-
-import pl.michalski.PortfolioProject.Entities.Tag;
-
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.List;
 
 public class NewProductDto {
 

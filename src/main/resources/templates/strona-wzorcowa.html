@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../static/css/strona-wzorcowa.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/strona-wzorcowa.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 </head>
 <body>
-<div class="container">
-
+    <div class="container-fluid">
 <!-- //panel górny- logo, wyszukiwarka, reklama, kontakt, koszyk, użytkownik, koszyk -->
-<div class="top-bar">
-    <div class="first-top-bar-logo"></div>
-    <div class="first-top-bar-search"></div>
-    <div class="first-top-bar-contact"></div>
-    <div class="first-top-bar-cart"></div>
-    <div class="first-top-bar-logout"></div>
+<div class="first-top-bar">
+    <div class="first-top-bar-logo"><a href="#"><img src="#" alt="logo"></a></div>
+    <div class="first-top-bar-search"><input type="search" placeholder="wyszukaj"></div>
+    <div class="first-top-bar-contact"><a href="#"></a><img src="#" alt="contact"></a></div>
+    <div class="first-top-bar-cart"><a href="#"></a><img src="#" alt="cart"></a></div>
+    <div class="first-top-bar-logout"><a href="@{/logout}"></a><img src="#" alt="logout"></a></div>
 </div>
 <div class="second-top-bar-categories">
-    <div class="second-top-bar-categories-laptops"><a href="@{/products/laptops">Laptopy</a></div>
-    <div class="second-top-bar-categories-laptops"><a href="@{/products/laptops">Procesory</a></div>
-    <div class="second-top-bar-categories-laptops"><a href="@{/products/laptops">Dyski</a></div>
-    <div class="second-top-bar-categories-laptops"><a href="@{/products/laptops">Karty Graficzne</a></div>
-    <div class="second-top-bar-categories-laptops"><a href="@{/products/laptops">RAM</a></div>
+    <div class="row">
+        <div class="col"><a href="@{/products/laptops">Laptopy</a></div>
+        <div class="col"><a href="@{/products/procesors">Procesory</a></div>
+        <div class="col"><a href="@{/products/">Dyski</a></div>
+        <div class="col"><a href="@{/products/laptops">Karty Graficzne</a></div>
+        <div class="col"><a href="@{/products/laptops">RAM</a></div>
+    </div>
 </div>
-
-
 </div>
 
 </body>
