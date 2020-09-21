@@ -18,7 +18,7 @@
 </head>
 <body>
 <h1>Wszystkie produkty</h1>
-<h3><a th:href="@{'/products/add'}">Dodaj produkt</a> </h3>
+<h3><a th:href="@{'/products/'}">Dodaj produkt</a> </h3>
 <div th:each="products:${allProducts}" th:id="all-products-container">
     <div th:class="one-product-class">
         <p th:text="${products.name}">Jabłko</p>

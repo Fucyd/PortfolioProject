@@ -1,10 +1,12 @@
 package pl.michalski.PortfolioProject.Controllers;
 
+import javax.validation.Valid;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import pl.michalski.PortfolioProject.dto.NewProductDto;
 import pl.michalski.PortfolioProject.service.ProductService;
-
-import javax.validation.Valid;
 
 
 @Controller
@@ -24,9 +24,10 @@ public class ProductController {
     private ProductService productService;
 
     @ModelAttribute("newProduct")
-    public NewProductDto newProductDto(){
+    public NewProductDto newProductDto() {
         return new NewProductDto();
     }
+
     @GetMapping("/all")
     public ModelAndView showAllProducts() {
         ModelAndView modelAndView = new ModelAndView("all-products");
@@ -36,7 +37,7 @@ public class ProductController {
 
     // szukanie produktu po nazwie
     // dodawanie produktu
-    @GetMapping("/add")
+    @GetMapping("/")
     public ModelAndView showNewProductForm(Model model) {
         ModelAndView modelAndView = new ModelAndView("new-product-form");
 //        NewProductDto newProductDto = new NewProductDto();
@@ -44,12 +45,12 @@ public class ProductController {
         return modelAndView;
     }
 
-    @PostMapping("/save")
+    @PostMapping("/")
     public String saveNewProduct(@ModelAttribute("newProduct") @Valid NewProductDto newProductDto, BindingResult bindingResult) {
-        if(bindingResult.hasErrors()){
+        if (bindingResult.hasErrors()) {
             return "new-product-form";
         }
-            productService.addNewProduct(newProductDto);
+        productService.addNewProduct(newProductDto);
         return "redirect:/products/all";
     }
 
