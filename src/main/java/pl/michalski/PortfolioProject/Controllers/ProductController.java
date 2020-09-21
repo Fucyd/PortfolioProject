@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import pl.michalski.PortfolioProject.dto.NewProductDto;
 import pl.michalski.PortfolioProject.service.ProductService;
 
+import javax.validation.Valid;
 
 
 @Controller
