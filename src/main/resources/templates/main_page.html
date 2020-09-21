@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+
+
 <head>
     <meta charset="UTF-8">
     <title>Wszystkie Produkty</title>
@@ -18,7 +22,9 @@
 </head>
 <body>
 <h1> Strona główna</h1>
-
+<div sec:authorize="isAuthenticated()">
+    Authenticated as <span sec:authentication="name"></span>
+<span><a th:href="@{/logout}">Wyloguj</a> </span>
 </div>
 </body>
 </html>
