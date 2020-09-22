@@ -44,6 +44,10 @@ border-radius: 25px;
     line-height: 4vh;
 }
 
+.second-top-bar-categories > .row > .col{
+    height: 5vh;
+    line-height: 2.5vh;
+}
 
 .second-top-bar-categories > .row > .col{
     margin-top: 0.5rem;
@@ -58,11 +62,29 @@ border-radius: 25px;
     margin: auto;
     margin-top: 2rem;
     height: 50vh;
-    width: 80vw;
-    background-color: rgba(94, 72, 128, 0.15);
+    width: 85vw;
+    
 }
 
 .page-footer{
     color:white;
     background-color: #212121;
+
+}
+.one-product > img{
+    height: 25vh;
+    width: auto;
+    background-color: turquoise;
+}
+.one-product{
+    min-width: 15vw;
+    min-height: 40vh;
+    background-color: rgba(94, 72, 128, 0.15);
+    display: grid;
+    margin: 1 1 1 1;
+    border: 1px solid darkgray;
+}
+
+.one-product-description{
+
 }

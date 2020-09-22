@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -17,6 +18,7 @@
         <div class="col"><a href="#"><img class="logo" src="../static/images/logo-portfolio-project.png" alt="logo"></a></div>
         <div class="col"><input class="search-input" type="search" placeholder="wyszukaj"></div>
         <div class="col"><a href="#"><img src="#" alt="contact"></a></div>
+        <div class="col"><a href="#"><img src="#" alt="account"></a></div>
         <div class="col"><a href="#"><img src="#" alt="cart"></a></div>
         <div class="col"><a href="@{/logout}"><img src="#" alt="logout"></a></div>
 </div>
@@ -25,16 +27,14 @@
     <div class="row">
         <div class="col"><a href="@{/products/laptops">Laptopy</a></div>
         <div class="col"><a href="@{/products/procesors">Procesory</a></div>
-        <div class="col"><a href="@{/products/">Dyski</a></div>
+        <div class="col"><a href="@{/products/disk">Dyski</a></div>
         <div class="col"><a href="@{/products/laptops">Karty Graficzne</a></div>
         <div class="col"><a href="@{/products/laptops">RAM</a></div>
     </div>
 </div>
 
 <div class="all-products">
-<h2>popraw === wszystkie produkty</h2>
-
-
+<!--Panel glowny-->
 </div>
 
 <!-- Footer -->

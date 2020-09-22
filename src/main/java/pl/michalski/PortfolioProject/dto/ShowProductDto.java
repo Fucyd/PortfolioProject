@@ -1,32 +1,24 @@
 package pl.michalski.PortfolioProject.dto;
 
-
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-public class NewProductDto {
-
-    @NotEmpty(message = "Pole nie może być puste")
-    @Size(min = 3, message = "Wpisz minimum 3 znaki")
+public class ShowProductDto {
+    private Long id;
     private String name;
-    @NotNull(message = "Pole nie może być puste")
     private Double price;
-    @NotEmpty(message = "Pole nie może być puste")
     private String description;
-    @NotEmpty(message = "Pole nie może być puste")
     private String imageUrl;
-    @NotEmpty(message = "Pole nie może być puste")
-private String category;
-    //    private List<Tag> tagList;
-    public String getCategory() {
-        return category;
+    private String category;
+
+    public Long getId() {
+        return id;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setId(Long id) {
+        this.id = id;
     }
-
 
     public String getName() {
         return name;
@@ -60,11 +52,11 @@ private String category;
         this.imageUrl = imageUrl;
     }
 
-//    public List<Tag> getTagList() {
-//        return tagList;
-//    }
-//
-//    public void setTagList(List<Tag> tagList) {
-//        this.tagList = tagList;
-//    }
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 }

@@ -1,36 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
-    <title>Wszystkie Produkty</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/strona-wzorcowa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-    <style>
-        .one-product-class {
-            margin-bottom: 15px;
-            background-color: antiquewhite;
-        }
-
-        img{
-            width: 150px;
-        }
-    </style>
 </head>
 <body>
-<h1>Wszystkie produkty</h1>
-<h3><a th:href="@{'/products/'}">Dodaj produkt</a> </h3>
-<div th:each="products:${allProducts}" th:id="all-products-container">
-    <div th:class="one-product-class">
-        <p th:text="${products.name}">Jabłko</p>
-        <p th:text="${products.price}">25zł</p>
-        <p th:text="${products.description}">Opakowanie 10kg jabłek prosto z polskich sadów.</p>
-        <img th:if="${!products.imageUrl.isEmpty()}" th:src="${products.imageUrl}" alt="obraz produktu imageUrlHosta">
+<div class="container-fluid">
+    <!-- //panel górny- logo, wyszukiwarka, reklama, kontakt, koszyk, użytkownik, koszyk -->
+    <div class="first-top-bar">
+        <div class="row">
+            <div class="col"><a href="#"><img class="logo" src="../static/images/logo-portfolio-project.png" alt="logo"></a></div>
+            <div class="col"><input class="search-input" type="search" placeholder="wyszukaj"></div>
+            <div class="col"><a href="#"><img src="#" alt="contact"></a></div>
+            <div class="col"><a href="#"><img src="#" alt="account"></a></div>
+            <div class="col"><a href="#"><img src="#" alt="cart"></a></div>
+            <div class="col"><a href="@{/logout}"><img src="#" alt="logout"></a></div>
+        </div>
+    </div>
+    <div class="second-top-bar-categories">
+        <div class="row">
+            <div class="col"><a href="@{/products/laptops">Laptopy</a></div>
+            <div class="col"><a href="@{/products/procesors">Procesory</a></div>
+            <div class="col"><a href="@{/products/disk">Dyski</a></div>
+            <div class="col"><a href="@{/products/laptops">Karty Graficzne</a></div>
+            <div class="col"><a href="@{/products/laptops">RAM</a></div>
+        </div>
+    </div>
 
+    <div class="all-products">
+        <h2>popraw === wszystkie produkty</h2>
+        <div class="one-product">
+            <img src="#" alt="obraz produktu">
+            <div class="one-product-description">
+                <p th:value="cena">cena: 2500 zł</p>
+                <p th:value="nazwa">Lenovo</p>
+
+            </div>
+        </div>
 
     </div>
-</div>
 
+    <!-- Footer -->
+    <footer class="page-footer fixed-bottom">
 
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            Piotr Michalski
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
 </div>
 </body>
 </html>
+
+
+
+
+
+
+<!--<h3><a th:href="@{'/products/'}">Dodaj produkt</a> </h3>-->
+<!--<div th:each="products:${allProducts}" th:id="all-products-container">-->
+<!--    <div th:class="one-product-class">-->
+<!--        <p th:text="${products.name}">Jabłko</p>-->
+<!--        <p th:text="${products.price}">25zł</p>-->
+<!--        <p th:text="${products.description}">Opakowanie 10kg jabłek prosto z polskich sadów.</p>-->
+<!--        <img th:if="${!products.imageUrl.isEmpty()}" th:src="${products.imageUrl}" alt="obraz produktu imageUrlHosta">-->
+
+
+<!--    </div>-->
+<!--</div>-->
+
+
+
+
