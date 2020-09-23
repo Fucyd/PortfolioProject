@@ -58,13 +58,7 @@ border-radius: 25px;
     border-right: 1px solid rgba(86,61,124,.2);
 }
 
-.all-products{
-    margin: auto;
-    margin-top: 2rem;
-    height: 50vh;
-    width: 85vw;
-    
-}
+
 
 .page-footer{
     color:white;
@@ -77,14 +71,33 @@ border-radius: 25px;
     background-color: turquoise;
 }
 .one-product{
-    min-width: 15vw;
+    width: 20rem;
     min-height: 40vh;
     background-color: rgba(94, 72, 128, 0.15);
     display: grid;
-    margin: 1 1 1 1;
+    margin: 10px 10px 10px 10px;
     border: 1px solid darkgray;
 }
 
-.one-product-description{
+.all-products{
+    height: auto;
+    width: 85vw;
+display: flex;
+justify-content: space-between;
 
+}
+
+.one-product-description{
+    text-align: center;
+
+}
+
+.card-body{
+    background-color: rgba(94, 72, 128, 0.15);
+}
+
+
+.btn-group > button{
+    font-weight: bold;
+    
 }
