@@ -1,17 +1,16 @@
 package pl.michalski.PortfolioProject.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import pl.michalski.PortfolioProject.Entities.Product;
-import pl.michalski.PortfolioProject.dto.ShowProductDto;
-import pl.michalski.PortfolioProject.repositories.ProductRepo;
 import pl.michalski.PortfolioProject.dto.NewProductDto;
-
+import pl.michalski.PortfolioProject.repositories.ProductRepo;
 
 import java.util.List;
 
-@Service
+@Component
 public class ProductService {
+
     @Autowired
     private ProductRepo productRepo;
 

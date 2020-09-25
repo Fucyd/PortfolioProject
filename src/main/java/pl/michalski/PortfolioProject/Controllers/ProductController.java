@@ -1,8 +1,5 @@
 package pl.michalski.PortfolioProject.Controllers;
 
-import javax.validation.Valid;
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,13 +12,18 @@ import org.springframework.web.servlet.ModelAndView;
 import pl.michalski.PortfolioProject.dto.NewProductDto;
 import pl.michalski.PortfolioProject.service.ProductService;
 
+import javax.validation.Valid;
+
 
 @Controller
 @RequestMapping("products")
 public class ProductController {
     // pobieranie produktow w oknie glownym
-    @Autowired
     private ProductService productService;
+    @Autowired
+    public ProductController(ProductService productService) {
+        this.productService = productService;
+    }
 
     @ModelAttribute("newProduct")
     public NewProductDto newProductDto() {

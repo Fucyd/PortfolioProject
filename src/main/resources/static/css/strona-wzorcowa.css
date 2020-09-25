@@ -17,7 +17,7 @@ body{
     display: flex;
     justify-content: space-around;
     background-color: white;
-    height: 5vh; 
+    height: 5vh;
     margin: auto;
 } */
 
@@ -63,7 +63,8 @@ border-radius: 25px;
 .page-footer{
     color:white;
     background-color: #212121;
-
+    display: flex;
+    justify-content: space-between;
 }
 .one-product > img{
     height: 25vh;
@@ -99,5 +100,5 @@ justify-content: space-between;
 
 .btn-group > button{
     font-weight: bold;
-    
+
 }
