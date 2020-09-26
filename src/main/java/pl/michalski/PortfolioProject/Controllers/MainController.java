@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.michalski.PortfolioProject.dto.UserRegistrationDto;
+import pl.michalski.PortfolioProject.service.EmailService;
+import pl.michalski.PortfolioProject.service.EmailServiceImpl;
 import pl.michalski.PortfolioProject.service.UserRegistrationService;
 
 import javax.validation.Valid;
@@ -17,8 +19,9 @@ import javax.validation.Valid;
 public class MainController {
 
     private UserRegistrationService userRegistrationService;
+    private EmailService emailService = new EmailServiceImpl();
     @Autowired
-    public MainController(UserRegistrationService userRegistrationService) {
+    public MainController(UserRegistrationService userRegistrationService, EmailService emailService) {
         this.userRegistrationService = userRegistrationService;
     }
 
@@ -63,6 +66,10 @@ public class MainController {
         }
 
         userRegistrationService.save(userRegistrationDto);
+
         return "redirect:/login";
     }
+
+
+
 }
