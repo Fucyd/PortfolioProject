@@ -28,8 +28,8 @@ public class EmailServiceImpl implements EmailService{
         try {
             MimeMessageHelper helper = new MimeMessageHelper(mail, true);
             helper.setTo(to);
-            helper.setReplyTo("email");
-            helper.setFrom("email");
+            helper.setReplyTo("email"); // tu wpisz email
+            helper.setFrom("email"); // tu wpisz email
             helper.setSubject(title);
             helper.setText(content, true);
         } catch (MessagingException e) {
