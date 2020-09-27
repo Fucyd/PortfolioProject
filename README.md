@@ -15,7 +15,7 @@
 
 
 #Features:
-registration, login
-role dependent product management
-adding to cart
-searching by product name/category/price
+- registration, login
+- role dependent product management
+- adding to cart
+- searching product by name/category/price
