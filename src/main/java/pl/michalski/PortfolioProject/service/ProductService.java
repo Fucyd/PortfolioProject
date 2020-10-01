@@ -11,8 +11,12 @@ import java.util.List;
 @Component
 public class ProductService {
 
-    @Autowired
+
     private ProductRepo productRepo;
+    @Autowired
+    public ProductService(ProductRepo productRepo) {
+        this.productRepo = productRepo;
+    }
 
     public List<Product> getAllProducts(){
         return productRepo.findAll();

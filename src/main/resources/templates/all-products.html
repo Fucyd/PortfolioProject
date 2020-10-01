@@ -19,10 +19,10 @@
         <div th:class="'row' + ' shadow-sm'">
             <div th:class="'col'"><a href="#"><img th:class="logo" th:src="@{/images/logo-portfolio-project.png}" alt="logo"></a></div>
             <div th:class="'col'"><input th:class="search-input" type="search" placeholder="wyszukaj"></div>
-            <div th:class="'col'"><a href="#"><img src="#" alt="contact"></a></div>
-            <div th:class="'col'"><a href="#"><img src="#" alt="account"></a></div>
-            <div th:class="'col'"><a href="#"><img src="#" alt="cart"></a></div>
-            <div th:class="'col'"><a href="@{/logout}"><img src="#" alt="logout"></a></div>
+            <div th:class="'col'"><a href="#"><img th:class="first-top-bar-image" th:src="@{/images/contact.png}" alt="contact"></a></div>
+            <div th:class="'col'"><a href="#"><img th:class="first-top-bar-image" th:src="@{/images/user.png}" alt="account"></a></div>
+            <div th:class="'col'"><a href="#"><img th:class="first-top-bar-image" th:src="@{/images/cart.png}" alt="cart"></a></div>
+            <div sec:authorize="isAuthenticated()" th:class="'col'"><a href="@{/logout}"><img th:class="first-top-bar-image"  th:src="@{/images/logout.png}"  alt="logout"></a></div>
         </div>
     </div>
     <div th:class="second-top-bar-categories">
@@ -37,9 +37,9 @@
     <h2>popraw === wszystkie produkty</h2> 
 
 <div th:class="container">
-    <div th:class="row" th:each="products : ${allProducts}">
-
-          <div th:class="col-4">
+    <div th:class="row">
+<!--    <div th:each="products : ${allProducts}">-->
+          <div th:class="col-4" th:each="products : ${allProducts}">
             <div th:class="'card' +  ' mb-4' + ' shadow-md'">
               <svg th:class="card-img-top" width="100%" height="225">
                   <image th:href="${products.imageUrl}"></image>            </svg>
@@ -56,10 +56,11 @@
                 </div>
               </div>
             </div>
-          </div>
+<!--          </div>-->
+    </div>
     </div>
 </div>
-
+</div>
     <!-- Footer -->
     <footer th:class="'page-footer' + ' fixed-bottom'">
 
@@ -78,7 +79,7 @@
 <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
 <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js}"></script>
 <script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
-    </div>
+
 
 </body>
 </html>
