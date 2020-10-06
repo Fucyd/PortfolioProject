@@ -24,6 +24,8 @@
 <h1> Strona główna</h1>
 <div sec:authorize="isAuthenticated()">
     Authenticated as <span sec:authentication="name"></span>
+    <div sec:authorize="isAuthenticated()">
+        Your Role is:  <span sec:authentication="role"></span>
 <span><a th:href="@{/logout}">Wyloguj</a> </span>
 </div>
 </body>

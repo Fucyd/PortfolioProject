@@ -23,6 +23,9 @@ public class User {
     joinColumns = {@JoinColumn(name = "USER_ID", referencedColumnName = "ID")},
     inverseJoinColumns = {@JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "ID")})
     private Set<Authority> authorities;
+    @OneToOne
+    private Cart cart;
+
     @Builder.Default
     private Boolean accountNonExpired = true;
     @Builder.Default
