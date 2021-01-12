@@ -1,4 +1,4 @@
-## Simple online shop - in progress
+## Simple online shop - in progress(brake) - resume work in March
 #Technologies:
 - Java
 - Spring
